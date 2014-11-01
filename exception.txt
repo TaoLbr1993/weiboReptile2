@@ -1,0 +1,954 @@
+####2014-10-13 17:09:14
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 54, in RepostMain
+    conn=MySQLdb.connect(host='localhost',user='root',password='',db='RepostData',charset='utf8')
+  File "E:\Python27\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+TypeError: 'password' is an invalid keyword argument for this function
+####2014-10-13 17:19:31
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 54, in RepostMain
+    conn=MySQLdb.connect(host='localhost',user='root',passwd='',db='RepostData',charset='utf8')
+  File "E:\Python27\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+####2014-10-13 17:48:41
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 54, in RepostMain
+    conn=MySQLdb.connect(host='localhost',user='root',passwd='librian930819',db='RepostData',charset='utf8')
+  File "E:\Python27\lib\site-packages\MySQLdb\__init__.py", line 81, in Connect
+    return Connection(*args, **kwargs)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 187, in __init__
+    super(Connection, self).__init__(*args, **kwargs2)
+OperationalError: (1049, "Unknown database 'repostdata'")
+####2014-10-13 19:16:44
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""create datebase if not exists """+userid)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'datebase if not exists 1191258123' at line 1")
+####2014-10-13 19:35:56
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""CREATE DATEBASE if not exists """+userid)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATEBASE if not exists 1191258123' at line 1")
+####2014-10-13 20:00:24
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""CREATE DATEBASE """+userid)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATEBASE 1191258123' at line 1")
+####2014-10-13 20:03:23
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""CREATE DATEBASE """+userid+';')
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DATEBASE 1191258123' at line 1")
+####2014-10-13 20:04:24
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""CREATE datebase """+userid+';')
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'datebase 1191258123' at line 1")
+####2014-10-13 20:05:57
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""CREATE datebase """+"'"+userid+"'"+";")
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'datebase '1191258123'' at line 1")
+####2014-10-13 20:07:00
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""CREATE datebase """+"\""+userid+"\""+";")
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'datebase "1191258123"\' at line 1')
+####2014-10-13 20:08:11
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""CREATE datebase """+"\""+'userid'+userid+"\""+";")
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'datebase "userid1191258123"\' at line 1')
+####2014-10-13 20:09:18
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""CREATE database """+"\""+userid+"\""+";")
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'"1191258123"\' at line 1')
+####2014-10-13 20:09:41
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""CREATE database """+"\""+userid+"\""+";")
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'"1191258123"\' at line 1')
+####2014-10-13 20:10:16
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""CREATE database """+"\'"+userid+"\'"+";")
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''1191258123'' at line 1")
+####2014-10-13 20:11:03
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""CREATE database """+userid+";")
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '1191258123' at line 1")
+####2014-10-13 20:11:31
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 57, in RepostMain
+    conn.selet_db(userid)
+AttributeError: 'Connection' object has no attribute 'selet_db'
+####2014-10-13 20:12:28
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""CREATE database """+"userid"+userid+";")
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1007, "Can't create database 'userid1191258123'; database exists")
+####2014-10-13 20:13:29
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""CREATE database if not exists"""+"userid"+userid+";")
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'existsuserid1191258123' at line 1")
+####2014-10-13 20:13:43
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 58, in RepostMain
+    cursor.execute('create table '+filename+'(id CHAR(50),time DATETIME, content TEXT')
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1")
+####2014-10-13 20:18:19
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""CREATE database """+"userid"+userid+" if not exists """+"userid"+userid+";")
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'if not exists userid1191258123' at line 1")
+####2014-10-13 20:19:59
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 56, in RepostMain
+    cursor.execute("""CREATE database """+"userid"+userid+" if not exists (select * from sys.databases where name = 'database_name')"+";")
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'if not exists (select * from sys.databases where name = 'database_name')' at line 1")
+####2014-10-13 20:29:33
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 58, in RepostMain
+    cursor.execute('create table '+filename+'(id CHAR(50),time DATETIME, content TEXT')
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1")
+####2014-10-13 20:46:07
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 62, in RepostMain
+    cursor.execute('create table '+filename+'(id CHAR(50),time DATETIME, content TEXT')
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1")
+####2014-10-13 20:58:42
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 62, in RepostMain
+    cursor.execute('create table '+filename+'(id CHAR(50),time DATETIME, content TEXT')
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1")
+####2014-10-13 21:07:49
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 64, in RepostMain
+    cursor.execute('create table '+filename+'(id CHAR(50),time DATETIME, content TEXT')
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1")
+####2014-10-13 21:14:24
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 65, in RepostMain
+    cursor.execute('create table '+filename+'(id CHAR(50),time DATETIME, content TEXT')
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1")
+####2014-10-13 21:14:43
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 65, in RepostMain
+    cursor.execute('create table '+filename+' (id CHAR(50),time DATETIME, content TEXT')
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1")
+####2014-10-13 22:04:38
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 134, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 200, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'userid1191258123.user' doesn't exist")
+####2014-10-13 22:15:30
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 65, in RepostMain
+    cursor.execute('create table '+filename+' (id CHAR(50),time DATETIME, content TEXT)')
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1050, "Table 'bdnjiefof' already exists")
+####2014-10-13 22:29:12
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 137, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 200, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1366, "Incorrect string value: '\\xB7\\xE7\\xB7\\xC9\\xB5\\xFC...' for column 'id' at row 1")
+####2014-10-13 22:40:03
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 138, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 200, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1366, "Incorrect string value: '\\xAA\\xE7\\x8B\\xBC\\xE5\\xB1...' for column 'content' at row 1")
+####2014-10-13 23:10:37
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 138, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 200, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1366, "Incorrect string value: '\\xAA\\xE7\\x8B\\xBC\\xE5\\xB1...' for column 'content' at row 1")
+####2014-10-14 17:46:42
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 138, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 200, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1366, "Incorrect string value: '\\xAA\\xE7\\x8B\\xBC\\xE5\\xB1...' for column 'content' at row 1")
+####2014-10-14 18:17:24
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 138, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 200, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1366, "Incorrect string value: '\\xAA\\xE7\\x8B\\xBC\\xE5\\xB1...' for column 'content' at row 1")
+####2014-10-14 20:00:24
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 138, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 200, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1366, "Incorrect string value: '\\xB1\\xA1\\xC7\\xE9\\xC8\\xCB...' for column 'id' at row 1")
+####2014-10-14 20:02:12
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 138, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 200, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1366, "Incorrect string value: '\\xB1\\xA1\\xC7\\xE9\\xC8\\xCB...' for column 'id' at row 1")
+####2014-10-14 20:09:48
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 63, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 138, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 200, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1366, "Incorrect string value: '\\xAA\\xE7\\x8B\\xBC\\xE5\\xB1...' for column 'content' at row 1")
+####2014-10-16 22:14:20
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 64, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 138, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 202, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1366, "Incorrect string value: '\\xAA\\xE7\\x8E\\xAF\\xE2\\x99...' for column 'content' at row 1")
+####2014-10-16 23:09:03
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 64, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 138, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 211, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1366, "Incorrect string value: '\\xAA\\xE7\\x8E\\xAF\\xE2\\x99...' for column 'content' at row 1")
+####2014-10-17 10:01:24
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 64, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 138, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 211, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1366, "Incorrect string value: '\\xAA\\xE7\\x8E\\xAF\\xE2\\x99...' for column 'content' at row 1")
+####2014-10-17 10:07:53
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 64, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 139, in RepostMain
+    conn=commit()
+NameError: global name 'commit' is not defined
+####2014-10-28 00:02:16
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 140, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 211, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'2014-07-24 10:10\',\'<img src=\\\\\\"http:\\\\/\\\\/img.t.sinajs.cn\\\\/t4\\\\/appstyle\\\\/exp\' at line 1')
+####2014-10-28 10:47:52
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 140, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 211, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'2014-07-24 10:10\',\'<img src=\\\\\\"http:\\\\/\\\\/img.t.sinajs.cn\\\\/t4\\\\/appstyle\\\\/exp\' at line 1')
+####2014-10-28 18:44:36
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 140, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 211, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'2014-07-24 10:10\',\'<img src=\\\\\\"http:\\\\/\\\\/img.t.sinajs.cn\\\\/t4\\\\/appstyle\\\\/exp\' at line 1')
+####2014-10-28 20:36:41
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 140, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 211, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'2014-07-24 10:10\',\'<img src=\\\\\\"http:\\\\/\\\\/img.t.sinajs.cn\\\\/t4\\\\/appstyle\\\\/exp\' at line 1')
+####2014-10-28 20:45:58
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 140, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 212, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'2014-07-24 10:10\',\'<img src=\\\\\\"http:\\\\/\\\\/img.t.sinajs.cn\\\\/t4\\\\/appstyle\\\\/exp\' at line 1')
+####2014-10-28 20:49:34
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 140, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 212, in get_info
+    n=cursor.execute(sqlCommand,param)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'2014-07-24 10:10\',\'<img src=\\\\\\"http:\\\\/\\\\/img.t.sinajs.cn\\\\/t4\\\\/appstyle\\\\/exp\' at line 1')
+####2014-10-28 20:54:17
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 140, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 214, in get_info
+    print sqlCommand+param
+TypeError: cannot concatenate 'str' and 'tuple' objects
+####2014-10-28 20:56:43
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 140, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 215, in get_info
+    print sqlCommand+param
+TypeError: cannot concatenate 'str' and 'tuple' objects
+####2014-10-28 20:57:50
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 140, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 213, in get_info
+    n=cursor.execute(sqlCommand)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '10:11,\xd7\xaa\xb7\xa2\xce\xa2\xb2\xa9)' at line 1")
+####2014-10-28 21:03:48
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 258, in RepostMain
+    for i in range(begintime,endtime,gap):
+TypeError: range() integer end argument expected, got float.
+####2014-10-28 22:38:54
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 140, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 216, in get_info
+    cursor.execute("insert into %s (id,time,content) values('%s','%s','%s')" % (filename,0,0,0))
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1292, "Incorrect datetime value: '0' for column 'time' at row 1")
+####2014-10-29 05:36:53
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 74, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist)
+TypeError: RepostMain() takes exactly 7 arguments (5 given)
+####2014-10-29 09:58:16
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 140, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 214, in get_info
+    final_repo=RepostAnalysis.get_repost(final_content)
+NameError: global name 'final_content' is not defined
+####2014-10-29 10:02:50
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 140, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 227, in get_info
+    cursor.execute("insert into %s (id,time,content) values('%s','%s','%s')" % (filename,0,'2000-01-01 00:00:00','0'))
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'userid3099016097.bfvfvzja1' doesn't exist")
+####2014-10-29 10:12:34
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 140, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 225, in get_info
+    n=cursor.execute(sqlCommand)
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1146, "Table 'userid3099016097.bfvfvzja1' doesn't exist")
+####2014-10-29 10:21:07
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 67, in RepostMain
+    cursor.execute('create table '+filename+' (id CHAR(50),time DATETIME, content TEXT,repofrom CHAR(50) ENGINE=MyISAM DEFAULT CHARSET=gbk')
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ENGINE=MyISAM DEFAULT CHARSET=gbk' at line 1")
+####2014-10-29 22:09:13
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 74, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 144, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 252, in get_info
+    polvl=RepostAnalysis.get_polvl(cursor,filename,final_repo)+1
+  File "e:\MyProjects\python\weiboCrawl\RepostAnalysis.py", line 26, in get_polvl
+    return repoform[0][3]
+IndexError: tuple index out of range
+####2014-10-29 22:11:31
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 74, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 144, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 252, in get_info
+    polvl=RepostAnalysis.get_polvl(cursor,filename,final_repo)+1
+  File "e:\MyProjects\python\weiboCrawl\RepostAnalysis.py", line 28, in get_polvl
+    return repoform[0][3]
+IndexError: tuple index out of range
+####2014-10-29 22:12:44
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 74, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 144, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 252, in get_info
+    polvl=RepostAnalysis.get_polvl(cursor,filename,final_repo)+1
+  File "e:\MyProjects\python\weiboCrawl\RepostAnalysis.py", line 29, in get_polvl
+    return repoform[0][3]
+IndexError: tuple index out of range
+####2014-10-29 22:16:41
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 74, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 107, in RepostMain
+    cursor.commit()
+AttributeError: 'Cursor' object has no attribute 'commit'
+####2014-10-29 22:19:19
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 74, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 145, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 252, in get_info
+    polvl=RepostAnalysis.get_polvl(cursor,filename,final_repo)+1
+  File "e:\MyProjects\python\weiboCrawl\RepostAnalysis.py", line 29, in get_polvl
+    return repoform[0][3]
+IndexError: tuple index out of range
+####2014-10-29 22:35:53
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 74, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 146, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 187, in get_info
+    conn=MySQLdb.connect(host='localhost',user='root',passwd='root',charset='utf8')
+NameError: global name 'MySQLdb' is not defined
+####2014-10-29 22:36:50
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 146, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 187, in get_info
+    conn=MySQLdb.connect(host='localhost',user='root',passwd='root',charset='utf8')
+NameError: global name 'MySQLdb' is not defined
+####2014-10-29 22:38:15
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 146, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 257, in get_info
+    polvl=RepostAnalysis.get_polvl(cursor,filename,final_repo)+1
+  File "e:\MyProjects\python\weiboCrawl\RepostAnalysis.py", line 24, in get_polvl
+    cursor.execute("select * from %s where id='%s'  order by time limit 1;" % (table,repoid))
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1267, "Illegal mix of collations (gbk_chinese_ci,IMPLICIT) and (utf8_general_ci,COERCIBLE) for operation '='")
+####2014-10-29 22:42:01
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 146, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 257, in get_info
+    polvl=RepostAnalysis.get_polvl(cursor,filename,final_repo)+1
+  File "e:\MyProjects\python\weiboCrawl\RepostAnalysis.py", line 24, in get_polvl
+    cursor.execute("select * from %s where id=='%s'  order by time limit 1;" % (table,repoid))
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=='??????'  order by time limit 1' at line 1")
+####2014-10-29 22:44:49
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 146, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 258, in get_info
+    polvl=RepostAnalysis.get_polvl(cursor,filename,final_repo)+1
+  File "e:\MyProjects\python\weiboCrawl\RepostAnalysis.py", line 29, in get_polvl
+    return repoform[0][3]
+IndexError: tuple index out of range
+####2014-10-29 23:17:38
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 146, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 258, in get_info
+    polvl=RepostAnalysis.get_polvl(cursor,filename,final_repo)+1
+  File "e:\MyProjects\python\weiboCrawl\RepostAnalysis.py", line 29, in get_polvl
+    return repoform[0][3]
+IndexError: tuple index out of range
+####2014-10-29 23:22:11
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 146, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid,poid=poname)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 244, in get_info
+    final_poid=poid.decode('utf-8').encode('cp936')
+  File "E:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xba in position 0: invalid start byte
+####2014-10-29 23:25:48
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 146, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid,poid=poname)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 244, in get_info
+    final_poid=poid.decode('utf-8').encode('cp936')
+  File "E:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xba in position 0: invalid start byte
+####2014-10-29 23:27:24
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 113, in RepostMain
+    final_poname=poname.decode('utf-8').encode('cp936')
+  File "E:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xba in position 0: invalid start byte
+####2014-10-29 23:28:38
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 159, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid,poid=poname)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 244, in get_info
+    if polvl==None:
+UnboundLocalError: local variable 'polvl' referenced before assignment
+####2014-10-29 23:30:36
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 159, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid,poid=poname)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 243, in get_info
+    polvl=RepostAnalysis.get_polvl(cursor,filename,final_repo)+1
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+####2014-10-29 23:32:09
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 159, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid,poid=poname)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 251, in get_info
+    sqlCommand="insert into %s (id,time,content,repofrom,polvl) values('%s','%s','%s','%s',%s)" % (filename,final_name,final_time,final_contents,final_poid,1)
+NameError: global name 'final_poid' is not defined
+####2014-10-29 23:33:23
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 159, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid,poid=poname)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 243, in get_info
+    repolvl=RepostAnalysis.get_polvl(cursor,filename,final_repo)
+  File "e:\MyProjects\python\weiboCrawl\RepostAnalysis.py", line 24, in get_polvl
+    cursor.execute("select * from %s where id='%s'  order by time limit 1;" % (table,repoid))
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    db = self._get_db()
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 161, in _get_db
+    self.errorhandler(self, ProgrammingError, "cursor closed")
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: cursor closed
+####2014-10-29 23:39:07
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 159, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,filename=filename,userid=userid,poid=poname)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 243, in get_info
+    repolvl=RepostAnalysis.get_polvl(cursor,filename,final_repo)
+  File "e:\MyProjects\python\weiboCrawl\RepostAnalysis.py", line 24, in get_polvl
+    cursor.execute("select * from %s where id='%s'  order by time limit 1;" % (table,repoid))
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 179, in execute
+    db = self._get_db()
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 161, in _get_db
+    self.errorhandler(self, ProgrammingError, "cursor closed")
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+ProgrammingError: cursor closed
+####2014-10-29 23:41:33
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 159, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid,poid=poname)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 251, in get_info
+    sqlCommand="insert into %s (id,time,content,repofrom,polvl) values('%s','%s','%s','%s',%s)" % (filename,final_name,final_time,final_contents,final_poid,1)
+NameError: global name 'final_poid' is not defined
+####2014-10-29 23:42:12
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 159, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid,poid=poname)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 261, in get_info
+    conn.commit()
+NameError: global name 'conn' is not defined
+####2014-10-29 23:44:32
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 159, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid,poid=poname)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 243, in get_info
+    repolvl=RepostAnalysis.get_polvl(cursor,filename,final_repo)
+  File "e:\MyProjects\python\weiboCrawl\RepostAnalysis.py", line 24, in get_polvl
+    cursor.execute("select * from %s where id='%s'  order by time limit 1;" % (table,repoid))
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xb6 in position 0: invalid start byte
+####2014-10-29 23:58:22
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 75, in <module>
+    RepostMain.RepostMain(accountlist,line,checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 159, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,userid=userid,poid=poname)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 243, in get_info
+    repolvl=RepostAnalysis.get_polvl(cursor,filename,final_repo)
+  File "e:\MyProjects\python\weiboCrawl\RepostAnalysis.py", line 24, in get_polvl
+    cursor.execute("select * from %s where id='%s'  order by time limit 1;" % (table,repoid))
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xd2 in position 0: invalid continuation byte
+####2014-10-30 18:50:18
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 149, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,poname=poname)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 238, in get_info
+    repofrom=repofrom.decode('utf-8').encode('cp936')
+AttributeError: 'NoneType' object has no attribute 'decode'
+####2014-10-30 19:24:47
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 107, in RepostMain
+    cursor.execute("insert into %s (id,time) values ('%s','%s')" % (filename,poname,potime))
+  File "E:\Python27\lib\site-packages\MySQLdb\cursors.py", line 202, in execute
+    self.errorhandler(self, exc, value)
+  File "E:\Python27\lib\site-packages\MySQLdb\connections.py", line 36, in defaulterrorhandler
+    raise errorclass, errorvalue
+OperationalError: (1366, "Incorrect string value: '\\xB2' for column 'id' at row 1")
+####2014-10-30 19:31:22
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 149, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,poname=poname)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 218, in get_info
+    repofrom=character(repofrom)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 192, in character
+    return content.decode('utf-8').encode('cp936')
+  File "E:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xbb in position 0: invalid start byte
+####2014-10-30 19:32:45
+Traceback (most recent call last):
+  File "e:\MyProjects\python\weiboCrawl\main.py", line 72, in <module>
+    RepostMain.RepostMain(accountlist,line[:-1],checkey,figure,proxylist,startTime=startTime,pauseTime=pauseTime)
+  File "e:\MyProjects\python\weiboCrawl\RepostMain.py", line 149, in RepostMain
+    WeiboMain.get_info(htmlContent,dataFile,cursor=cursor,filename=filename,poname=poname)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 219, in get_info
+    repofrom=character(repofrom)
+  File "e:\MyProjects\python\weiboCrawl\WeiboMain.py", line 193, in character
+    return content.decode('utf-8').encode('cp936')
+  File "E:\Python27\lib\encodings\utf_8.py", line 16, in decode
+    return codecs.utf_8_decode(input, errors, True)
+UnicodeDecodeError: 'utf8' codec can't decode byte 0xbb in position 0: invalid start byte
